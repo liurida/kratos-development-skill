@@ -1,0 +1,29 @@
+```yaml
+swagger: "2.0"
+info:
+  title: "api/helloworld/v1/greeter.proto"
+  version: "version not set"
+paths:
+  /helloworld/{name}:
+    get:
+      summary: "Sends a greeting"
+      operationId: "Greeter_SayHello"
+      responses:
+        "200":
+          description: "A successful response."
+          schema:
+            $ref: "#/definitions/v1HelloReply"
+      parameters:
+        - name: "name"
+          in: "path"
+          required: true
+          type: "string"
+      tags:
+        - "Greeter"
+definitions:
+  v1HelloReply:
+    type: "object"
+    properties:
+      message:
+        type: "string"
+```
