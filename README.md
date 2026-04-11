@@ -50,6 +50,26 @@ A structured repository of Kratos microservices framework best practices and pat
 
 ## Using These Skills
 
+### Installation
+
+To make these skills available in another project, you can use the provided `link-skills.sh` script to create symbolic links. This keeps your skills centralized and easy to update.
+
+From within the `kratos-development` directory, run the script and provide the **_ABSOLUTE path_** to your target project:
+
+```bash
+# Make the script executable (only needs to be done once)
+chmod +x ./link-skills.sh
+
+# Link the skills to your chatbot project using an ABSOLUTE path
+./link-skills.sh /path/to/your/project
+```
+
+**IMPORTANT:** You **MUST** use an absolute path to your project directory. The script will validate this and return an error if a relative path is used. This approach ensures the links are stable, but it means they are specific to your machine's file structure.
+
+_(Note: The script is smart enough to handle paths that already include `.claude/skills`.)_
+
+### Usage
+
 Each skill follows this structure:
 
 ```markdown
